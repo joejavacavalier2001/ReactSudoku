@@ -136,10 +136,10 @@ class SudokuCell extends Component{
 
   render() {
 	// Your component receives its own props as usual
-    const { reveal, cellAnswer } = this.props;
-    // These props are injected by React DnD,
-    // as defined by your `collect` function above:
-   	const { isOver, canDrop, connectDropTarget } = this.props;
+	const { reveal, cellAnswer } = this.props;
+	// These props are injected by React DnD,
+	// as defined by your `collect` function above:
+	const { isOver, canDrop, connectDropTarget } = this.props;
 	//var classNames = require('classnames');
 	//var cellClasses = isOver({ shallow: true }) ? (canDrop() ? classNames("Cell","green") : classNames("Cell","red")) : (canDrop() ? classNames("Cell","yellow") : classNames("Cell"));
 
@@ -152,16 +152,15 @@ class SudokuCell extends Component{
 		return inputElement;
 	} 
 
-    if (this.state.revealNumber) {
-       	return (<div>{cellAnswer}</div>);
-    }
+	if (this.state.revealNumber) {
+		return (<div>{cellAnswer}</div>);
+	}
 	if (this.wasEditing){
 		this.wasEditing = false;
 		// eslint-disable-next-line no-console
 		console.log("exiting edit mode");
 	}
-
-    return connectDropTarget(<button onClick={this.handleClick}>?</button>);
+	return connectDropTarget(<button onClick={this.handleClick}>?</button>);
   }
   componentDidUpdate(){
 	// eslint-disable-next-line no-console
