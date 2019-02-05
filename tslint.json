@@ -1,0 +1,17 @@
+{
+  "extends": ["tslint-react", "tslint-config-prettier", "tslint-eslint-rules"],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts"
+    ]
+  },
+  "rules": {
+	  "array-type": [true, "generic"],
+	  "object-literal-sort-keys": false,
+	  "no-console": "off",
+	  "ordered-imports": false,
+	  "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"]
+  }
+}
+

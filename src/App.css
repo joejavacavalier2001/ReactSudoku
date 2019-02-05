@@ -1,0 +1,92 @@
+.App {
+  margin:1em auto 1em;
+  text-align: center;
+  width: 610px;
+  height: 900px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.boardRowCSSClass {
+	/*padding: 0.5em auto 0.5em !important;*/
+ }
+.boardColCSSClass {
+	padding: 0.25em 0 0.25em !important;
+	border: 1px solid #a2a0a0;
+}
+.boardColCSSClass div {
+  padding: 0.75em 0;
+}
+.boardColCSSClass input {
+	position: relative;
+	top: 0.25em;
+	font-size: 20px;
+	width:2em;
+	overflow:hidden;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.doubleRightCellBorder{
+	border-right: thick double #32a1ce !important;
+}
+.noLeftCellBorder {
+	border-left-width: 0 !important;
+}
+.doubleBottomRowBorder{
+	border-bottom: thick double #32a1c3 !important;
+}
+button{
+  width:80%;
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #6b6b6b;
+  font-size: 20px;
+  background: #92c7f9;
+  text-decoration: none;
+  padding: 0.5em 0 0.25em;
+}
+.firstParagraphCSSClass {
+	margin-bottom:0;
+}
+.secondParagraphCSSClass {
+	margin:0;
+}
+.secondHeaderParagraphCSSClass {
+	margin: 0 0 1.5em 0;
+}
+
+.possibleAnswersPanelCSSClass {
+	display:flex;
+}
+
+.possibleAnswerCSSClass {
+	padding: 1em .75em;
+	margin: 0 auto;
+	width: 4.5em;
+	border: 1px solid #a2a0a0;
+	background-color: #d1f1ef;
+}
+
+
