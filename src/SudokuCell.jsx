@@ -144,12 +144,22 @@ class SudokuCell extends Component{
 	//var cellClasses = isOver({ shallow: true }) ? (canDrop() ? classNames("Cell","green") : classNames("Cell","red")) : (canDrop() ? classNames("Cell","yellow") : classNames("Cell"));
 
 	if (this.state.editing){
-		var inputElement = (<input type="number" length="1" value="" onKeyDown={this.boundHandleOnKeyDown} onBlur={this.boundHandleOnBlur} onFocus={this.boundHandleOnFocus} onInput={this.boundHandleOnInput} ref={this.inputRef}/>); 
+		var inputElement1 = (<input type="number" length="1" value="" onKeyDown={this.boundHandleOnKeyDown} onBlur={this.boundHandleOnBlur} onFocus={this.boundHandleOnFocus} onInput={this.boundHandleOnInput} ref={this.inputRef}/>); 
+		var inputElement2 = (<input type="text" length="1" value="" onKeyDown={this.boundHandleOnKeyDown} onBlur={this.boundHandleOnBlur} onFocus={this.boundHandleOnFocus} onInput={this.boundHandleOnInput} ref={this.inputRef}/>); 
 		// eslint-disable-next-line no-console
 		console.log("entering edit mode");
 		this.inputWasFocused = false;
 		this.wasEditing = true;
-		return inputElement;
+		var platform = require('platform');
+		// eslint-disable-next-line no-console
+		console.log("reading platform information");
+	
+		var browserName = platform.name ? platform.name.toLowerCase() : platform.layout.toLowerCase();
+
+		// Is the end-user using IE on a Desktop or not on a mobile/Mobile device?
+		var blnIEDesktop = (browserName.includes("ie") || browserName.includes("trident")) && !browserName.includes("obile");
+
+		return (blnIEDesktop ? inputElement2 : inputElement1);
 	} 
 
 	if (this.state.revealNumber) {
